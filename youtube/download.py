@@ -11,7 +11,7 @@ AUDIO_SAVE_PATH = "mp3"
 # Set the value to mp3 or mp4 depening on what you wish to download
 # mp3 just audio in mp3 format
 # mp4 video
-OUTPUT="mp4"
+OUTPUT="mp3"
 
 def main():
     '''
