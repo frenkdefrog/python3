@@ -1,0 +1,21 @@
+{
+  "database": {
+    "username": "",
+    "password" : "",
+    "host": "",
+    "name":""
+  },
+  "nginx": {
+    "config_directory": "/etc/nginx",
+    "cert_directory": "/etc/nginx/certs"
+  },
+  "smtp": {
+    "host": "",
+    "username": "",
+    "sender": "",
+    "password": "",
+    "port": "",
+    "receiver": "",
+    "ehlo": ""
+  }
+}
