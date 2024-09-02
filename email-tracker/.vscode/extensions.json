@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        //Dev-Containers and Docker:
+        "ms-vscode-remote.remote-containers",
+        "ms-azuretools.vscode-docker",
+        // Git tools:
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+    ]
+}

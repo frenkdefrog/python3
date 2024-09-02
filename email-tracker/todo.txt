@@ -1,0 +1,13 @@
+logrotate for python script log files:
+sudo nano /etc/logrotate.d/postfix_policy_service
+/var/log/postfix_policy_service.log {
+    daily
+    missingok
+    rotate 14
+    compress
+    delaycompress
+    notifempty
+    create 640 root adm
+}
+
+sudo logrotate --debug /etc/logrotate.d/postfix_policy_service

@@ -1,0 +1,26 @@
+{
+    "name": "Dev Container",
+    "dockerComposeFile": ["./docker-compose.yaml"],
+    "service": "dev-tools",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root",
+    "overrideCommand": false,
+    "runServices": ["dev-tools","mysql"],
+    "postStartCommand": "/bin/bash -c '/root/postStartup.sh'",
+
+    "customizations": {
+        //configure properties for VSCode
+        "vscode": {
+            //adding used extensions
+            "extensions": [
+                //dev-container and docker
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker",
+                //Git tools
+                "mhutchie.git-graph",
+                "eamodio.gitlens"
+            ]
+        }
+    }
+}

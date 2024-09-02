@@ -1,0 +1,5 @@
+# Line endings are crlf to retain compability with Windows
+* text eol=crlf
+
+# Shell scripts hardly work with crlf, so using lf only
+*.sh text eol=lf
