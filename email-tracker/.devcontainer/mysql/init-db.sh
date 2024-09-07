@@ -1,9 +1,13 @@
 #!/bin/bash
 
 mysql -u root -p"$MYSQL_ROOT_PASSWORD" <<-EOSQL
+	USE email_tracker;
+
     CREATE USER IF NOT EXISTS '$MYSQL_USER'@'%' IDENTIFIED WITH mysql_native_password BY '$MYSQL_PASSWORD';
-    GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';
-    FLUSH PRIVILEGES;
+
+	GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%';
+
+	FLUSH PRIVILEGES;
 
     CREATE TABLE user_emails (
         email VARCHAR(255) PRIMARY KEY,
@@ -14,6 +18,6 @@ mysql -u root -p"$MYSQL_ROOT_PASSWORD" <<-EOSQL
     );
 
     CREATE TABLE whitelist(
-	email VARCHAR(255) PRIMARY KEY
+		email VARCHAR(255) PRIMARY KEY
     ); 
 EOSQL
